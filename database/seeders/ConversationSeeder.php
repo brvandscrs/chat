@@ -15,8 +15,6 @@ class ConversationSeeder extends Seeder
     {
         Conversation::create([
             'title' => 'Test Conversation',
-            'created_at' => now(),
-            'updated_at' => now(),
             'creator_id' => 1,
             'inter1_id' => 2,
             'inter2_id' => 3,
@@ -24,14 +22,10 @@ class ConversationSeeder extends Seeder
 
         Conversation::create([
             'title' => 'Another Test Conversation',
-            'date_created' => now(),
-            'date_updated' => now(),
             'creator_id' => 2,
             'inter1_id' => 3,
             'inter2_id' => 4,
         ]);
-        factory(Conversation::class, 100)->create([
-            
-        ]);
+        factory(Conversation::class, 10)->create();
     }
 }

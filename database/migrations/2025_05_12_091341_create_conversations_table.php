@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('conversations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->timestamp('date_created')->useCurrent();
-            $table->timestamp('date_updated')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->foreignId('creator_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('inter1_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('inter2_id')->nullable()->constrained('users')->onDelete('cascade');
