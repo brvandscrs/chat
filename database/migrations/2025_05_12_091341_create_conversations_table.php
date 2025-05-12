@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('conversations', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->string('title');
             $table->timestamp('date_created')->useCurrent();
             $table->timestamp('date_updated')->useCurrent()->useCurrentOnUpdate();
             $table->foreignId('creator_id')->constrained('users')->onDelete('cascade');
