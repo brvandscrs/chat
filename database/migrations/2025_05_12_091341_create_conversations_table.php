@@ -17,8 +17,8 @@ return new class extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->foreignId('creator_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('inter1_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('inter2_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->foreignId('interlocuteur1_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('interlocuteur2_id')->nullable()->constrained('users')->onDelete('cascade');
         });
     }
 

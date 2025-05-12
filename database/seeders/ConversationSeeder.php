@@ -26,6 +26,6 @@ class ConversationSeeder extends Seeder
             'interlocuteur1_id' => 3,
             'interlocuteur2_id' => 4,
         ]);
-        factory(Conversation::class, 10)->create();
+        Conversation::factory(10)->create();
     }
 }
