@@ -16,15 +16,15 @@ class ConversationSeeder extends Seeder
         Conversation::create([
             'title' => 'Test Conversation',
             'creator_id' => 1,
-            'inter1_id' => 2,
-            'inter2_id' => 3,
+            'interlocuteur1_id' => 2,
+            'interlocuteur2_id' => 3,
         ]);
 
         Conversation::create([
             'title' => 'Another Test Conversation',
             'creator_id' => 2,
-            'inter1_id' => 3,
-            'inter2_id' => 4,
+            'interlocuteur1_id' => 3,
+            'interlocuteur2_id' => 4,
         ]);
         factory(Conversation::class, 10)->create();
     }

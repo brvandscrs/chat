@@ -21,8 +21,8 @@ class ConversationFactory extends Factory
             'created_at' => $this->faker->dateTime,
             'updated_at' => $this->faker->dateTime,
             'creator_id' => $this->faker->numberBetween(1, 10),
-            'inter1_id' => $this->faker->numberBetween(1, 10),
-            'inter2_id' => $this->faker->numberBetween(1, 10),
+            'interlocuteur1_id' => $this->faker->numberBetween(1, 10),
+            'interlocuteur2_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }
