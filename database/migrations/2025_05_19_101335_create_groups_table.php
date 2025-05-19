@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('description');
+            $table->integer('nbrMaxUser');
             $table->timestamps('created_at')->useCurrent();
             $table->timestamps('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
