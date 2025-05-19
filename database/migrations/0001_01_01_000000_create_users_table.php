@@ -23,6 +23,10 @@ return new class extends Migration
             $table->boolean('is_active')->default(true);
             $table->rememberToken();
             $table->timestamps();
+            $table->string('telephone');
+            $table->string('adresse');
+            $table->string('code_postal');
+            $table->string('ville');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
